@@ -84,7 +84,7 @@ class Game {
     match() {
         for (let card in matchingCardArray) {
             matchingCardArray[card].isMatched = true;
-            matchingCardArray[card].listItem.className = 'card match shake-correct';
+            matchingCardArray[card].listItem.className = 'card match';
         }
 
         matchingCardArray.length = 0;
