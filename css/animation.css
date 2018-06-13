@@ -1,5 +1,6 @@
-.card:hover {
-    background: -50%;
+
+.card:hover:not(.show) {
+    animation: shake 1.5s infinite;
 }
 
 .shake-incorrect {
