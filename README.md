@@ -13,8 +13,8 @@ To get started, open `js/game.js` and start building out the app's functionality
 
 For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
 
-## Contributing
+## License
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+Memory Game Project is available under the MIT license. See the LICENSE file for more info.
 
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+For details, check out [LICENSE](LICENSE).
