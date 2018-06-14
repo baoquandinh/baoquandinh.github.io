@@ -17,6 +17,8 @@ class Game {
         this.wrongCounter = 0;
         this.moves = document.querySelector(".moves");
         this.stars = document.querySelector(".stars");
+        this.timerElement = document.querySelector(".timer");
+
     }
     // Creates a new deck and shuffles
     start() {
@@ -28,6 +30,7 @@ class Game {
 
     // Restart the game with the same deck, just randomizes the position and resets move count along with star counter
     restart() {
+        game.resetTimer();
         game.resetCounter();
         game.createStars();
         for (let card in cards) {
@@ -41,11 +44,79 @@ class Game {
     // Update the move counter per flip
     updateMoves() {
         this.counter += 1;
+        if (this.counter === 1) {
+            setInterval(game.startTimer(),1000);
+        }
         if (this.counter % 2 === 0) {
             this.moveCounter += 1;
             this.moves.textContent = String(this.moveCounter);
         }
     }
+
+    // Restarts the timer
+    resetTimer() {
+
+    }
+
+    startTimer() {
+        this.sec = 0;
+        this.min = 11;
+        this.hour = 0;
+        setInterval(game.timer, 1000);
+    }
+
+    timer() {
+        game.sec++;
+
+        if (game.sec === 60) {
+            console.log("increment a minute");
+            game.sec = 0;
+            game.min++;
+        }
+        if (game.min === 60) {
+            game.min = 0;
+            game.hour++;
+        }
+        if (game.hour === 24) {
+            console.log("Please stop you took way too long");
+        }
+        if (game.hour <= 9 && game.min <= 9 && game.sec <= 9) {
+            game.timerElement.innerHTML = `0${game.hour}:0${game.min}:0${game.sec}`;
+        }
+        else if ( game.hour <= 9 && game.min <= 9 && game.sec > 9) {
+            game.timerElement.innerHTML = `0${game.hour}:0${game.min}:${game.sec}`;
+        }
+        else if ( game.hour <= 9 && game.min > 9 && game.sec <= 9) {
+            game.timerElement.innerHTML = `0${game.hour}:${game.min}:0${game.sec}`;
+        }
+        else if ( game.hour <= 9 && game.min > 9 && game.sec > 9) {
+            game.timerElement.innerHTML = `0${game.hour}:${game.min}:${game.sec}`;
+        }
+        else if ( game.hour >= 10 && game.min >9 && game.sec > 9) {
+            game.timerElement.innerHTML = `${game.hour}:0${game.min}:${game.sec}`;
+        }
+        else if ( game.hour >= 10 && game.min > 9 && game.sec <= 9) {
+            game.timerElement.innerHTML = `${game.hour}:${game.min}:0${game.sec}`;
+        }
+        else if ( game.hour >= 10 && game.min <= 9 && game.sec > 9) {
+            game.timerElement.innerHTML = `${game.hour}:0${game.min}:${game.sec}`;
+        }
+        else if ( game.hour >= 10 && game.min <= 9 && game.sec <= 9) {
+            game.timerElement.innerHTML = `${game.hour}:0${game.min}:0${game.sec}`;
+        }
+        else {
+            console.log("I pass too")
+            game.timerElement.innerHTML = `${game.hour}:${game.min}:${game.sec}`;
+        }
+        console.log(`${game.hour}:${game.min}:${game.sec}`);
+
+    }
+
+
+
+
+
+    // Stars the timer
 
     // Resets all the counters
     resetCounter() {
@@ -62,14 +133,10 @@ class Game {
 
     // Regardless of how many stars are left, this will set the stars back to 3
     createStars() {
-        console.log('here');
-        console.log(this);
-
         this.starCounter = starList.childElementCount;
         if (this.starCounter === 3) {
             return;
         }
-        console.log(this);
         while (this.starCounter < 3) {
             let starListItem =  document.createElement('li');
             let starItem = document.createElement('i');
