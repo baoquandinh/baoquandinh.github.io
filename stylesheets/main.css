@@ -146,8 +146,8 @@ main {
 
 .animal_card,
 .pixel_maker,
-.arcade_game,
 .memory_game,
+.arcade_game,
 .restaurant_review,
 .neighborhood_map {
     z-index: 10;
@@ -201,6 +201,11 @@ https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.c
     color: white;
 }
 
+.fa-github {
+    background:black;
+    color: white;
+}
+
 .fa {
     font-size: 30px;
     width: 20px;
@@ -215,13 +220,19 @@ https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.c
 }
 
 .footer_linkedin {
-    width: 50%;
+    width: 33%;
+    text-align: center;
+    position: relative;
+}
+
+.footer_github {
+    width: 33%;
     text-align: center;
     position: relative;
 }
 
 .footer_google {
-    width: 50%;
+    width: 33%;
     text-align: center;
     position: relative;
 }

@@ -7,8 +7,8 @@
 .profile_picture,
 .animal_card,
 .pixel_maker,
-.arcade_game,
 .memory_game,
+.arcade_game,
 .restaurant_review,
 .neighborhood_map {
     order: 10;
@@ -100,8 +100,8 @@
 
     .animal_card,
     .pixel_maker,
-    .arcade_game,
     .memory_game,
+    .arcade_game,
     .restaurant_review,
     .neighborhood_map {
         width: 100%;
@@ -171,12 +171,12 @@
         width: 30%;
     }
 
-    .arcade_game {
+    .memory_game {
         order: 3;
         width: 30%;
     }
 
-    .memory_game {
+    .arcade_game {
         order: 4;
         width: 30%;
     }
