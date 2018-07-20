@@ -1,39 +1,137 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
     <meta charset="utf-8">
-    <title>Matching Game</title>
-    <meta name="description" content="">
-    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/animation.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Baoquan Dinh</title>
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/responsive.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/overlay.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <h1>Matching Game</h1>
-        </header>
-
-        <section class="score-panel">
-        	<ul class="stars">
-        	</ul>
-
-        	<span class="moves">0</span> Moves
-            <span class="timer">00:00:00</span>
-            <div class="restart">
-        		<i class="fa fa-repeat"></i>
-        	</div>
-        </section>
-
-        <ul class="deck">
-        </ul>
+<header class="header">
+    <div class="header_logo">
+        <img class="header_logo_picture" src="images/profile_logo.png" alt="logo">
     </div>
-    <script src="js/card.js"></script>
-    <script src="js/deck.js"></script>
-    <script src="js/game.js"></script>
-    <script src="js/app.js"></script>
+    <div class="header_name_wrapper">
+        <h1 class="header_name">
+            BAOQUAN DINH
+        </h1>
+        <h3 class="header_description">
+            FRONT-END DEVELOPER IN TRAINING
+        </h3>
+    </div>
+
+</header>
+
+
+<main>
+    <div class="container">
+        <!--PROFILE SECTION-->
+        <div class="profile">
+            <div class="profile_picture_wrapper">
+                <img class="profile_picture" src="images/profile-picture.jpg" alt="profile picture">
+            </div>
+            <p class="profile-description">Hello there! My name is Baoquan Dinh and I am really excited and honored to
+                be part of this Front End Development Nanodegree Program. There are so many things I am excited to learn
+                and have already learned from phase 1 and phase 2 of this assignment. I always want to keep learning and
+                expect to see everyone at the end of this phase with plent more knowledge and experience under their
+                belts! </p>
+        </div>
+
+        <!-- FEATURED WORKS SECTION  -->
+        <h2 class="featured_work_text">Featured Work</h2>
+        <div class="animal_card">
+            <img class="animal_card_picture" src="images/animal-card.png" alt="image of animal card project">
+            <div class="featured_work_overlay">
+                <div class="text">
+                    <h3>Animal Card</h3>
+                    <p>A simple project that depicts your favorite animal on a card</p>
+                    <a class="button_overlay" href="https://codepen.io/baoquandinh/pen/qYyKba" target="_blank" >
+                        <div class='featured_work_button'>
+                            <span>Visit Project</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="pixel_maker">
+            <img class="pixel_maker_picture" src="images/pixel-maker.png" alt="image of pixel maker project">
+            <div class="featured_work_overlay">
+                <div class="text">
+                    <h3>Pixel Art Maker</h3>
+                    <p>A single page app that allows users to create their own pixel art</p>
+                    <div class='featured_work_button'>
+                        <a href="https://codepen.io/baoquandinh/pen/ZojRpz" target="_blank" >
+                            <span>Visit Project</span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="arcade_game">
+            <img class="arcade_game_picture" src="images/arcade-game.png" alt="image of arcade game project">
+            <div class="featured_work_overlay">
+                <div class="text">
+                    <h3>Arcade Clone Game</h3>
+                    <p>Coming around soon</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="memory_game">
+            <img class="memory_game_picture" src="images/memory-picture.png" alt="image of memory game project">
+            <div class="featured_work_overlay">
+                <div class="text">
+                    <h3>Memory Game</h3>
+                    <p>Coming around soon</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="restaurant_review">
+            <img class="restaurant_review_picture" src="images/restaurant-review.png"
+                 alt="image of restaurant review project">
+            <div class="featured_work_overlay">
+                <div class="text">
+                    <h3>Restaurant Review</h3>
+                    <p>Coming around soon</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="neighborhood_map">
+            <img class="neighborhood_map_picture" src="images/neighborhood-map.png"
+                 alt="image of neighborhood map project">
+            <div class="featured_work_overlay">
+                <div class="text">
+                    <h3>Neighborhood Map</h3>
+                    <p>Coming around soon</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer_linkedin">
+            <a href="https://www.linkedin.com/in/baoquandinh/" class="fa fa-linkedin"  target="_blank">
+            </a>
+        </div>
+        <div class="footer_google">
+            <a href="mailto:baoquanxdinh@gmail.com" class="fa fa-google"  target="_top">
+            </a>
+        </div>
+    </footer>
+</main>
 
 </body>
 </html>

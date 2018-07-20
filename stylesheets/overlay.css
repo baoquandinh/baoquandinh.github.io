@@ -1,0 +1,103 @@
+/*
+*
+* TEXT OVERLAY
+*
+*/
+.text {
+    /*white-space: nowrap;*/
+    color: #028090;
+    font-size: 18px;
+    position: absolute;
+    overflow: hidden;
+    top: 35%;
+    left: 50%;
+    width: 100%;
+    word-wrap: break-word;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+
+
+/*
+*
+* Fade in feature works overlay
+*
+*/
+
+.featured_work_overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #00A896;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: .5s ease;
+    border-radius: 5%;
+}
+
+/*
+*
+* Overlay implementation
+*
+*/
+
+.profile_picture_wrapper:hover .featured_work_overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 1;
+}
+
+.featured_work_button:hover {
+    background-color: #028090;
+}
+
+.animal_card:hover .featured_work_overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 1;
+}
+
+.pixel_maker:hover .featured_work_overlay {
+    width: auto;
+    height: auto;
+    position: absolute;
+    opacity: 1;
+}
+
+.arcade_game:hover .featured_work_overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 1;
+}
+
+.memory_game:hover .featured_work_overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 1;
+
+}
+
+.restaurant_review:hover .featured_work_overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 1;
+
+}
+
+.neighborhood_map:hover .featured_work_overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 1;
+
+}
+

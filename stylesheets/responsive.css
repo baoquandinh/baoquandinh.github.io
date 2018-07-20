@@ -1,0 +1,200 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.profile_picture,
+.animal_card,
+.pixel_maker,
+.arcade_game,
+.memory_game,
+.restaurant_review,
+.neighborhood_map {
+    order: 10;
+    flex-grow: 1;
+}
+
+@media screen and (max-width: 354px) {
+
+    .header_logo_picture {
+        width: 80px;
+        height: 80px;
+    }
+
+    .header_name_wrapper {
+        float: right;
+        margin-top: 20px;
+    }
+
+    .header_name {
+        font-size: 20px;
+    }
+
+    .header_description {
+        font-size: 10px;
+    }
+}
+
+
+/*For screen smaller than 420px*/
+@media screen and (min-width: 355px) and (max-width: 420px) {
+
+    .header_logo_picture {
+        width: 100px;
+        height: 100px;
+    }
+
+    .header_name {
+        font-size: 1.5em;
+        /*margin-left: 10px;*/
+    }
+
+    .header_description {
+        font-size: .7em;
+        margin-top: -5%;
+    }
+
+    .featured_work_text {
+        font-size: 1em;
+    }
+    
+    .header_name_wrapper {
+        float: right;
+        vertical-align: bottom;
+    }
+
+    .featured_work_text {
+        font-size: 1.5em;
+    }
+
+}
+
+/*For small monitors and laptops*/
+@media screen and (min-width: 421px) {
+
+
+    .header_logo_picture {
+        height: 100px;
+        width: 100px;
+    }
+    
+    .header_name_wrapper {
+        float: right;
+    }
+
+    .header_name {
+        font-size: 1.5em;
+    }
+
+    .header_description {
+        font-size: .8em;
+        margin-top: -5%;
+    }
+
+    .featured_work_text {
+        order: 0;
+        width: 100%;
+    }
+
+
+    .animal_card,
+    .pixel_maker,
+    .arcade_game,
+    .memory_game,
+    .restaurant_review,
+    .neighborhood_map {
+        width: 100%;
+    }
+}
+
+/*Ipads and large screens*/
+@media screen and (min-width: 520px) {
+    .header_logo_picture {
+        height: 150px;
+        width: 150px;
+    }
+
+    .header_name_wrapper {
+        margin-top: 55px;
+    }
+
+    .header_name {
+        font-size: 2em;
+    }
+}
+
+
+@media screen and (min-width: 630px) {
+
+    .header_logo_picture {
+        height: 100%;
+        width: 100%;
+    }
+
+    .header_name {
+        font-size: 3em;
+    }
+
+    .profile,
+    .header,
+    .container,
+    .footer {
+        width: 600px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+/*}*/
+
+/*@media screen and (min-width: 850px) {*/
+
+    .header_name {
+        font-size: 3em;
+    }
+
+    .header_description {
+        font-size: 1em;
+    }
+
+    .featured_work_text {
+        order: 0;
+        width: 100%;
+    }
+
+    .animal_card {
+        order: 1;
+        width: 30%;
+    }
+
+    .pixel_maker {
+        order: 2;
+        width: 30%;
+    }
+
+    .arcade_game {
+        order: 3;
+        width: 30%;
+    }
+
+    .memory_game {
+        order: 4;
+        width: 30%;
+    }
+
+    .restaurant_review {
+        order: 5;
+        width: 30%;
+    }
+
+    .neighborhood_map {
+        order: 6;
+        width: 30%;
+    }
+
+    .profile_picture {
+        width: auto;
+        height: auto;
+    }
+
+}
+
