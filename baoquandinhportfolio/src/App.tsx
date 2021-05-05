@@ -7,8 +7,8 @@ import { Link, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar bg="dark" variant="dark">
+    <div className="App" style={{height: '100vh'}}>
+      <Navbar bg="dark" variant="dark" className="sticky-top">
         <Navbar.Collapse>
           <Nav className="mr-auto">
             <Nav.Link as={Link} to="/">About Me</Nav.Link>

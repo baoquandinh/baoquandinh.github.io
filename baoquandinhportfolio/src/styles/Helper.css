@@ -1,0 +1,11 @@
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.test {
+  border: red 1px solid;
+}
+
+.remove-padding {
+  padding: 0;
+}
