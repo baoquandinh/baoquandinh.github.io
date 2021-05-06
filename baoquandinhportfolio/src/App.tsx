@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav } from 'react-bootstrap'
 import { Link, Switch, Route } from 'react-router-dom';
 
-
 function App() {
   return (
     <div className="App" style={{height: '100vh'}}>
