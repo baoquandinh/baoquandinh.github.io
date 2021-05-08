@@ -1,13 +1,23 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar, Nav } from 'react-bootstrap'
+import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Fragment } from 'react'
+import { Link } from 'react-router-dom'
+
 
 export const PortfolioNavbar = () => {
-    return <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-        <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-        </Nav>
-    </Navbar>
+    return <Fragment>
+        <Navbar collapseOnSelect bg="dark" expand="lg" variant="dark">
+            <Container>
+                <Navbar.Toggle aria-controls="portfolio-responsive-navbar" />
+                <Navbar.Collapse className="mr-auto" id="portfolio-responsive-navbar">
+                    <Nav className="nav-fill w-100">
+                        <Nav.Link as={Link} to="/">About Me</Nav.Link>
+                        <Nav.Link as={Link} to="/skills">Skills</Nav.Link>
+                        <Nav.Link as={Link} to="/projects">Projects</Nav.Link>
+                        <Nav.Link as={Link} to="/contact">Contact Me</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
+    </Fragment>
 }
