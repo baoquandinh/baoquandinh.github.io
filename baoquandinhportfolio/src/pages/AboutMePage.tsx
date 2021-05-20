@@ -1,14 +1,16 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Row, Col, Image } from 'react-bootstrap'
 import { AboutMeDescription } from '../components/AboutMe/AboutMeDescription'
+import { Grid } from '@material-ui/core';
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+import '../styles/aboutme.css';
+// import '../styles/Helper.css';
 
 export const AboutMePage = () => {
-    return <Container id="about-me-container">
-        <Row className="align-items-center" style={{height: "100vh"}}>
-            <Col md={12}>
-                <AboutMeDescription />
-            </Col>
-            <Col style={{cursor:"pointer"}} data-aos="fade-in" data-aos-duration="2000" data-aos-delay="2000" data-aos-anchor-placement="contact-me-container" md={12}><p>Scroll Down</p></Col>
-        </Row>
-    </Container>
+    return <Grid container direction="column" justify="space-evenly" alignItems="center" style={{ height: "100vh" }} className="test">
+        <Grid item>
+            <AboutMeDescription />
+        </Grid>
+        <Grid item >
+            <ArrowDownwardIcon id="about-me-arrowdown" fontSize="large" data-aos="fade-in" data-aos-duration="2000" data-aos-delay="2000"/>
+        </Grid>
+    </Grid>
 }

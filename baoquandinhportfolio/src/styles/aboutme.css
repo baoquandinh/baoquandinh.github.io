@@ -1,0 +1,14 @@
+@keyframes arrow-bounce {
+    0% {top: 0px}
+    50% {top: 15px}
+    100% {top: 0px}
+}
+
+#about-me-arrowdown {
+animation-name: arrow-bounce;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+animation-timing-function: ease;
+cursor: pointer;
+position: relative;
+}
