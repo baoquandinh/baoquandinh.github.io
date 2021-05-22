@@ -1,9 +1,8 @@
 import { Component, Fragment } from 'react'
 import { IProject } from './models/Project'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../styles/ProjectCard.css'
 import '../../styles/Helper.css'
-import { Container, Row, Col, Button, Card, Modal } from 'react-bootstrap'
+import { Card, CardActionArea, CardActions, Button, CardMedia, CardContent, Typography } from '@material-ui/core';
 
 interface IProp {
     project: IProject;
@@ -43,15 +42,19 @@ export class ProjectCard extends Component<IProp, IState> {
 
     render() {
         const { project } = this.props
-        return <Card style={{ height: "100%" }}>
-            <Card.Img id={`${project.imageName}-image`} src={`${process.env.PUBLIC_URL}/images/${project.imageName}.png`} alt={`Image of ${project.imageName}`} style={{ height: "100%" }}></Card.Img>
-            <Card.ImgOverlay id={`${project.imageName}-image-overlay`} style={{paddingTop: '15px'}}>
-                <Card.Title>{project.name}</Card.Title>
-                <Card.Text>{project.description}</Card.Text>
-                <Card.Text style={{ position: "absolute", right: '0px', left: '0px', bottom: '25px' }}>
-                    <Button onClick={() => { this.handleClick(project.projectHTMLName) }}>Show Me</Button>
-                </Card.Text>
-            </Card.ImgOverlay>
+        return <Card data-aos="fade-out" data-aos-duration="2000" style={{ height: "300px", width: "300px"}}>
+            <CardActionArea style={{position: "relative"}}>
+                <CardMedia image={`${process.env.PUBLIC_URL}/images/${project.imageName}.png`} title={project.imageName} style={{height: "120px"}}/>
+                <CardContent>
+                    <Typography color="textPrimary" variant="h5" component="h2">{project.name}</Typography>
+                    <Typography color="textSecondary" variant="body2" component="p">{project.description}</Typography>
+                </CardContent>
+            </CardActionArea>
+            <CardActions style={{position: "absolute", bottom: "0", left: "35%", right: "35%"}}>
+                <Button size="small" color="primary">
+                    Show Me
+                </Button>
+            </CardActions>
         </Card>
     }
 }

@@ -1,12 +1,17 @@
 import { ContactMeForm } from '../components/ContactMe/ContactMeForm'
-import { Container, Row, Col, Button, Form } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/Helper.css'
+import { Grid, Typography, Paper } from "@material-ui/core";
+
 
 export const ContactMePage = () => {
-    return <Container>
-        <Row className="h-100" style={{ paddingBottom: '10px' }}>
-            <Col><h1>Contact Me</h1></Col>
-        </Row>
-        <ContactMeForm />
-    </Container>
+    return <Grid container direction="column" justify="space-evenly" alignItems="center" className="test" style={{ height: "100vh" }}>
+        <Grid item>
+            <Typography color="textPrimary" variant="h3" component="h3">Contact Me</Typography>
+        </Grid>
+        <Grid item>
+            <Paper elevation={3}>
+                <ContactMeForm />
+            </Paper>
+        </Grid>
+    </Grid>
 }

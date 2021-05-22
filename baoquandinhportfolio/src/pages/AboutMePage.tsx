@@ -5,7 +5,7 @@ import '../styles/aboutme.css';
 // import '../styles/Helper.css';
 
 export const AboutMePage = () => {
-    return <Grid container direction="column" justify="space-evenly" alignItems="center" style={{ height: "100vh" }} className="test">
+    return <Grid container direction="column" justify="space-evenly" alignItems="center" style={{ height: "100vh" }}>
         <Grid item>
             <AboutMeDescription />
         </Grid>

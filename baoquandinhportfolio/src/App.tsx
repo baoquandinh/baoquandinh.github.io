@@ -3,14 +3,17 @@ import { AboutMePage, SkillsPage, ProjectsPage, ContactMePage } from './pages/in
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'aos/dist/aos.css';
 import AOS from 'aos'
+import { Container } from '@material-ui/core';
 
 function App() {
   AOS.init()
   return (
     <div className="App">
-      <AboutMePage />
-      <ProjectsPage />
-      <ContactMePage />
+      <Container maxWidth={false}>
+        <AboutMePage />
+        <ProjectsPage />
+        <ContactMePage />
+      </Container>
     </div>
   );
 }
