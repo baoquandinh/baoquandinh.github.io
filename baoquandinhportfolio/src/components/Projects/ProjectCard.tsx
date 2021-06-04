@@ -42,11 +42,11 @@ export class ProjectCard extends Component<IProp, IState> {
 
     render() {
         const { project } = this.props
-        return <Card data-aos="fade-out" data-aos-duration="2000" style={{ height: "300px", width: "300px"}}>
+        return <Card data-aos="fade-out" data-aos-duration="2000" style={{ height: "300px", width: "250px"}}>
             <CardActionArea style={{position: "relative"}}>
                 <CardMedia image={`${process.env.PUBLIC_URL}/images/${project.imageName}.png`} title={project.imageName} style={{height: "120px"}}/>
                 <CardContent>
-                    <Typography color="textPrimary" variant="h5" component="h2">{project.name}</Typography>
+                    <Typography color="textPrimary" variant="h6" component="h5">{project.name}</Typography>
                     <Typography color="textSecondary" variant="body2" component="p">{project.description}</Typography>
                 </CardContent>
             </CardActionArea>
