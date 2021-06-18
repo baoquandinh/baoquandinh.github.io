@@ -4,25 +4,25 @@ import { AboutMePage, SkillsPage, ProjectsPage, ContactMePage, WelcomePage } fro
 import Footer from './components/Footer/Footer';
 import 'aos/dist/aos.css';
 import AOS from 'aos'
-import { Grid } from '@material-ui/core'
+import { Grid, Container } from '@material-ui/core'
 
 function App() {
   AOS.init()
   return (
     <div className="App">
-      <Grid container direction="column">
+      {/* <Grid container direction="column">
         <Grid item className="test">Icon and Picture</Grid>
         <Grid item className="test">About me </Grid>
         <Grid item>
           <Footer />
         </Grid>
-      </Grid>
+      </Grid> */}
       {/* <WelcomePage /> */}
-      {/* <Container>
+      <Container>
         <AboutMePage />
         <ProjectsPage />
         <ContactMePage />
-      </Container> */}
+      </Container>
     </div>
   );
 }

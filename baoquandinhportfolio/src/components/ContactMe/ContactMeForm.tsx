@@ -108,7 +108,7 @@ export class ContactMeForm extends Component<IProp, IState> {
     }
 
     render() {
-        return <Grid container spacing={1} justifyContent="center" data-aos="fade-in" data-aos-duration="1000">
+        return <Grid container spacing={1} justify="center" data-aos="fade-in" data-aos-duration="1000">
             {this.inputFields.map(inputField => {
                 return <Grid item key={`${inputField.id}GridItem`} xs={12}>
                     <FormControl variant="filled" error={false} required style={{ width: "75%", paddingTop: "7px", paddingBottom: "7px" }}>

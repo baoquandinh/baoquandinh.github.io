@@ -4,7 +4,7 @@ import { Grid, Typography, Paper } from '@material-ui/core';
 
 
 export const ContactMePage = () => {
-    return <Grid container direction="column" justifyContent="center" alignItems="center"  className="test" style={{ height: "100vh" }}>
+    return <Grid container direction="column" justify="center" alignItems="center"  className="test" style={{ height: "100vh" }}>
         {/* <Grid item xs={12}>
             <Typography color="textPrimary" variant="h3" component="h3">Contact Me</Typography>
         </Grid> */}
